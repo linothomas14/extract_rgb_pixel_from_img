@@ -1,10 +1,12 @@
-from PIL import Image 
+from PIL import Image
+
+from helper import printRGBValue, printRGBValue2
 
 file_name = "indo.jpg"
 
 img = Image.open(file_name)
 
-img = img.resize((5, 5))
+img = img.resize((10, 10))
 
 img = img.convert("RGB")
 
@@ -12,9 +14,9 @@ img.save("output.jpg")
 
 width, height = img.size
 
-for h in range(height):
-    for w in range(width):
-        pixel_value = img.getpixel((w,h))
-        print(pixel_value, end= ")")
-    print()
+# assignment week 2
+# printRGBValue2(img,height,width)
 
+# assignment week 4
+# printRGBValue(img,height,width)
+printRGBValue2(img,height,width)

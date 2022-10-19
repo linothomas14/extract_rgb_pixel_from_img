@@ -1,6 +1,6 @@
-# print RGB value per pixel
 import numpy as np
 
+# print RGB value per pixel
 def printRGBValue(img,height,width):
     for h in range(height):
         for w in range(width):
@@ -11,10 +11,10 @@ def printRGBValue(img,height,width):
 
 
 # print RGB value per pixel
-def printRGBValue2(img,height,width):
+def printHistogram(img,height,width):
 
     a = np.zeros(shape=(256, 3))
-
+    a = a.astype(int)
     for h in range(height):
         for w in range(width):
             

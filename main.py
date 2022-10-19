@@ -1,16 +1,14 @@
 from PIL import Image
 
-from helper import printRGBValue, printRGBValue2
+from helper import printRGBValue, printHistogram
 
-file_name = "indo.jpg"
+file_name = "mario.jpg"
 
 img = Image.open(file_name)
 
-img = img.resize((10, 10))
+img = img.resize((100, 100))
 
 img = img.convert("RGB")
-
-img.save("output.jpg")
 
 width, height = img.size
 
@@ -19,4 +17,4 @@ width, height = img.size
 
 # assignment week 4
 # printRGBValue(img,height,width)
-printRGBValue2(img,height,width)
+printHistogram(img,height,width)
